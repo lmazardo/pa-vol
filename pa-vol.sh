@@ -64,6 +64,28 @@ function get() {
         echo "$BAR"
 }
  
+case $(basename $0 .sh) in
+        pa-vol)
+                true
+        ;;
+        pa-plus)
+                plus
+                exit 0
+        ;;
+        pa-minus)
+                minus
+                exit 0
+        ;;
+        pa-toggle)
+                mute
+                exit 0
+        ;;
+        pa-get)
+                get
+                exit 0
+        ;;
+esac
+
 case "$1" in
         plus)
                 plus
